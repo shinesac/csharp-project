@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
-using LINQ;
+// using LINQ;
 
-namespace flashcards
+namespace Flashcards
 {
     public static class QA
     {
-        private static Dictionary<string, string > _qa = new Dictionary<string, string>
+        public static Dictionary<string, string > qa = new Dictionary<string, string>
         {
             {"What state does KY stand for?", "Kentucky"},
             {"What is the capital of Kentucky?", "Frankfort"},
@@ -16,6 +16,25 @@ namespace flashcards
             {"What event is Kentucky famous for", "The Kentucky Derby"}
 
         };
+
+        public static Dictionary<string, string> quiz = new Dictionary<string, string>();
+
+        public static QuizGenerator()
+        {
+            foreach (KeyValuePair<string, string> entry in qa)
+            {
+                if (entry not in correct)
+                {
+                    quiz.Add(qa.Key, qa.Value);
+                }
+                else
+                {
+                    continue;
+                }
+            }
+        }   
     }
+    
+
 
 }

@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 
-namespace flashcards {
+namespace Flashcards
+
+{
 
    public static class Correct
    {

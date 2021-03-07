@@ -1,10 +1,10 @@
-using System;
-using System.Collections.Generic;
+// using System;
+// using System.Collections.Generic;
 
-namespace flashcards
-{
-   public static class Wrong
-   {
-       public static Dictionary<string, string > wrong = new Dictionary<string, string>();
-   }
-}
+// namespace Flashcards
+// {
+//    public static class Wrong
+//    {
+//        public static Dictionary<string, string > wrong = new Dictionary<string, string>();
+//    }
+// }
