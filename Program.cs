@@ -55,7 +55,7 @@ namespace flashcards
             }
             else
             {
-                public {} wrong = new QA {};
+                public {} wrong = new QA {get, set};
             }
         }
     }
