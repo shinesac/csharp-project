@@ -1,0 +1,4 @@
+C:\Users\18653\OneDrive\Documents\CL Projects\csharp\Flashcards\obj\Debug\netcoreapp3.1\flashcards.csprojAssemblyReference.cache
+C:\Users\18653\OneDrive\Documents\CL Projects\csharp\Flashcards\obj\Debug\netcoreapp3.1\flashcards.AssemblyInfoInputs.cache
+C:\Users\18653\OneDrive\Documents\CL Projects\csharp\Flashcards\obj\Debug\netcoreapp3.1\flashcards.AssemblyInfo.cs
+C:\Users\18653\OneDrive\Documents\CL Projects\csharp\Flashcards\obj\Debug\netcoreapp3.1\flashcards.csproj.CoreCompileInputs.cache
