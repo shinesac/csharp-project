@@ -14,40 +14,35 @@ namespace Flashcards
                 Console.WriteLine("Press any key to see the answer");
                 string input = Console.ReadLine();
 
-            }
+                if (input == null)
+                {
+                    continue;
+                }
+                else
+                {
+                    Console.WriteLine(entry.Value + "\n");
+                    Console.WriteLine("Did you get the answer right? y/n");
+                    var input2 = Console.ReadLine().ToLower();
+                    
+                    if (input2 == "y")
+                        {
+                            Correct.correct.Add(entry.Key, entry.Value);
+                        }
+                    else if (input2 == "n")
+                        {
+                            Wrong.wrong.Add(entry.Key, entry.Value);
+                        }
                 
-        //  (int index = 0; index < qa.Length; index++)
-            
-                // QA qa = qa[index];
-               
+                    else
+                        {
+                            continue;
+                        }
 
+                }
 
-                // if (input == null)
-                // {
-                //     continue;
-                // }
-                // else
-                // {
-                //     Console.WriteLine(quiz.Value);
-                // }
-
-                // Console.WriteLine("Did you get the answer right? y/n");
-
-                // input2 = Console.ReadLine().ToLower();
-
-                // if (input2 == "y")
-                // {
-                //     correct.Add(quiz.Key, quiz.Value);
-                // }
-                // else if (input2 == "n")
-                // {
-                //     wrong.Add(quiz.Key, quiz.Value);
-                // }
-                // else
-                // {
-                //     continue;
-                // }
             }
+                   
+        }
 
 
             // Console.WriteLine("You got correct.Length right and wrong.Lenth wrong");
