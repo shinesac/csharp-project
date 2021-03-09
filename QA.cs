@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-// using LINQ;
+// using System.Linq;
 
 namespace Flashcards
 {
@@ -17,24 +17,24 @@ namespace Flashcards
 
         };
 
-        public static Dictionary<string, string> quiz = new Dictionary<string, string>();
+        // public static Dictionary<string, string> quiz = new Dictionary<string, string>();
 
-        public static QuizGenerator()
-        {
-            foreach (KeyValuePair<string, string> entry in qa)
-            {
-                if (entry not in correct)
-                {
-                    quiz.Add(qa.Key, qa.Value);
-                }
-                else
-                {
-                    continue;
-                }
-            }
+        // var QuizGenerator()
+        // {
+        //     foreach (KeyValuePair<string, string> entry in qa)
+        //     {
+        //         if (entry not in correct)
+        //         {
+        //             quiz.Add(qa.Key, qa.Value);
+        //         }
+        //         else
+        //         {
+        //             continue;
+        //         }
+        //     }
         }   
     }
     
 
 
-}
+// }

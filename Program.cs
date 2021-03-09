@@ -1,5 +1,6 @@
 ﻿using System;
-// using LINQ;
+using System.Collections.Generic;
+// using System.Linq;
 
 namespace Flashcards
 {
@@ -7,9 +8,9 @@ namespace Flashcards
     {
         static void Main(string[] args)
         {
-            foreach(KeyValuePair<string, string> entry in quiz)
+            foreach(KeyValuePair<string, string> entry in QA.qa)
             {
-                Console.WriteLine(quiz.Key);
+                Console.WriteLine(entry.Key);
                 Console.WriteLine("Press any key to see the answer");
                 string input = Console.ReadLine();
 
@@ -34,11 +35,11 @@ namespace Flashcards
 
                 // input2 = Console.ReadLine().ToLower();
 
-                // if (input2 = "y")
+                // if (input2 == "y")
                 // {
                 //     correct.Add(quiz.Key, quiz.Value);
                 // }
-                // elif(input2 = "n")
+                // else if (input2 == "n")
                 // {
                 //     wrong.Add(quiz.Key, quiz.Value);
                 // }

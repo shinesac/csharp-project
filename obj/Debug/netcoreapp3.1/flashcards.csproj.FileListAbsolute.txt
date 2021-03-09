@@ -2,3 +2,12 @@ C:\Users\18653\OneDrive\Documents\CL Projects\csharp\Flashcards\obj\Debug\netcor
 C:\Users\18653\OneDrive\Documents\CL Projects\csharp\Flashcards\obj\Debug\netcoreapp3.1\flashcards.AssemblyInfoInputs.cache
 C:\Users\18653\OneDrive\Documents\CL Projects\csharp\Flashcards\obj\Debug\netcoreapp3.1\flashcards.AssemblyInfo.cs
 C:\Users\18653\OneDrive\Documents\CL Projects\csharp\Flashcards\obj\Debug\netcoreapp3.1\flashcards.csproj.CoreCompileInputs.cache
+C:\Users\18653\OneDrive\Documents\CL Projects\csharp\Flashcards\bin\Debug\netcoreapp3.1\flashcards.exe
+C:\Users\18653\OneDrive\Documents\CL Projects\csharp\Flashcards\bin\Debug\netcoreapp3.1\flashcards.deps.json
+C:\Users\18653\OneDrive\Documents\CL Projects\csharp\Flashcards\bin\Debug\netcoreapp3.1\flashcards.runtimeconfig.json
+C:\Users\18653\OneDrive\Documents\CL Projects\csharp\Flashcards\bin\Debug\netcoreapp3.1\flashcards.runtimeconfig.dev.json
+C:\Users\18653\OneDrive\Documents\CL Projects\csharp\Flashcards\bin\Debug\netcoreapp3.1\flashcards.dll
+C:\Users\18653\OneDrive\Documents\CL Projects\csharp\Flashcards\bin\Debug\netcoreapp3.1\flashcards.pdb
+C:\Users\18653\OneDrive\Documents\CL Projects\csharp\Flashcards\obj\Debug\netcoreapp3.1\flashcards.dll
+C:\Users\18653\OneDrive\Documents\CL Projects\csharp\Flashcards\obj\Debug\netcoreapp3.1\flashcards.pdb
+C:\Users\18653\OneDrive\Documents\CL Projects\csharp\Flashcards\obj\Debug\netcoreapp3.1\flashcards.genruntimeconfig.cache
