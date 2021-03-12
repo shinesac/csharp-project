@@ -56,6 +56,8 @@ namespace Flashcards
                 if (input3 == "y")
                 {
                     Correct.correct.Clear();
+                    while (WrongCount != 0)
+                    {
                     foreach (KeyValuePair<string, string> entry in Wrong.wrong)
                         {
                             Console.WriteLine("\n" + entry.Key);
@@ -81,11 +83,7 @@ namespace Flashcards
                                 continue;
                             }
                         }
-                }
-                else 
-                {
-                    
-                }   
+                 
                 
                 CorrectCount = Correct.correct.Count();
                 WrongCount = Wrong.wrong.Count();
@@ -93,6 +91,7 @@ namespace Flashcards
                 Console.WriteLine("\n" + "Would you like to review the incorrect questions? y/n.");
 
                 var input4 = Console.ReadLine().ToLower();
+                }
 
         }
         else
@@ -108,5 +107,6 @@ namespace Flashcards
 
  
     }
+}
 }
 }
