@@ -41,49 +41,64 @@ namespace Flashcards
                 }
 
             }
+            
             int CorrectCount = Correct.correct.Count;
             int WrongCount = Wrong.wrong.Count;
-            Console.WriteLine("\n" + "Quiz Results: You got {0} correct and {1} wrong", CorrectCount, WrongCount );
-            Console.WriteLine("\n" + "Would you like to review the incorrect questions? y/n.");
+            if(WrongCount != 0)
+            {
+                Console.WriteLine("\n" + "Quiz Results: You got {0} correct and {1} wrong!", CorrectCount, WrongCount );
 
-            var input3 = Console.ReadLine().ToLower();
+            
+                Console.WriteLine("\n" + "Would you like to review the incorrect questions? y/n.");
+
+                var input3 = Console.ReadLine().ToLower();
            
-            if (input3 == "y")
-            {
-                foreach (KeyValuePair<string, string> entry in Wrong.wrong)
-                    {
-                        Console.WriteLine("\n" + entry.Key);
-                        Console.WriteLine("Press enter to see the answer");
-                        string input = Console.ReadLine();
-                         
-                        Console.WriteLine(entry.Value + "\n");
-                        Console.WriteLine("Did you get the answer right? y/n");
-                        var input2 = Console.ReadLine().ToLower();
+                if (input3 == "y")
+                {
+                    Correct.correct.Clear();
+                    foreach (KeyValuePair<string, string> entry in Wrong.wrong)
+                        {
+                            Console.WriteLine("\n" + entry.Key);
+                            Console.WriteLine("Press enter to see the answer");
+                            string input = Console.ReadLine();
+                            
+                            Console.WriteLine(entry.Value + "\n");
+                            Console.WriteLine("Did you get the answer right? y/n");
+                            var input2 = Console.ReadLine().ToLower();
 
-                        if (input2 == "y")
-                        {
-                            Correct.correct.Add(entry.Key, entry.Value);
-                        }
-                        else if (input2 == "n")
-                        {
-                            Wrong.wrong.Add(entry.Key, entry.Value);
-                        }
+                            if (input2 == "y")
+                            {
+                                Correct.correct.Add(entry.Key, entry.Value);
+                                Wrong.wrong.Remove(entry.Key);
+                            }
+                            else if (input2 == "n")
+                            {
+                                continue;
+                            }
 
-                        else
-                        {
-                            continue;
+                            else
+                            {
+                                continue;
+                            }
                         }
-                    }
-            }
-            else 
-            {
+                }
+                else 
+                {
+                    
+                }   
                 
-            }      
-             
-            
-            
-        }
+                CorrectCount = Correct.correct.Count();
+                WrongCount = Wrong.wrong.Count();
+                Console.WriteLine("\n" + "Quiz Results: You got {0} correct and {1} wrong", CorrectCount, WrongCount );
+                Console.WriteLine("\n" + "Would you like to review the incorrect questions? y/n.");
 
+                var input4 = Console.ReadLine().ToLower();
+
+        }
+        else
+        {
+            Console.WriteLine("\n" + "Congratulations, you got all answers correct!");
+        }
         
 
                 
@@ -93,4 +108,5 @@ namespace Flashcards
 
  
     }
+}
 }
