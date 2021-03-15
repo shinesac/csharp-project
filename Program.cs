@@ -23,6 +23,7 @@ namespace Flashcards
                     Console.WriteLine(entry.Value + "\n");
                     Console.WriteLine("Did you get the answer right? y/n");
                     var input2 = Console.ReadLine().ToLower();
+                   
 
                     if (input2 == "y")
                     {
@@ -66,21 +67,12 @@ namespace Flashcards
                             Console.WriteLine(entry.Value + "\n");
                             Console.WriteLine("Did you get the answer right? y/n");
                             var input2 = Console.ReadLine().ToLower();
-
-                            if (input2 == "y")
-                            {
-                                Correct.correct.Add(entry.Key, entry.Value);
-                                Wrong.wrong.Remove(entry.Key);
-                            }
-                            else if (input2 == "n")
+                            // put thing here
+                             if (AnswerReader.Read(input2, entry) == false)
                             {
                                 continue;
                             }
-
-                            else
-                            {
-                                continue;
-                            }
+                           
                         }
                  
                 
