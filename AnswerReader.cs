@@ -5,9 +5,9 @@ namespace Flashcards
 {
     public static class AnswerReader
     {
-        public static bool Read(string input2, KeyValuePair <string, string> entry)
+        public static bool Read(string secondIsAnswerRight, KeyValuePair <string, string> entry)
         {
-             if (input2 == "y")
+             if (secondIsAnswerRight == "y")
                             {
                                 Correct.correct.Add(entry.Key, entry.Value);
                                 Wrong.wrong.Remove(entry.Key);
@@ -15,6 +15,18 @@ namespace Flashcards
                             }
                                 return false;
 
+        }
+
+        public static void SortList(string firstIsAnswerRight, KeyValuePair <string, string> entry)
+        {
+                 if (firstIsAnswerRight == "y")
+                {
+                    Correct.correct.Add(entry.Key, entry.Value);
+                }
+                else if (firstIsAnswerRight == "n")
+                {
+                    Wrong.wrong.Add(entry.Key, entry.Value);
+                } 
         }
     }
 }
