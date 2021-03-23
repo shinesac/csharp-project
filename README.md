@@ -6,4 +6,5 @@ Flash Card
 o	at the end show them the ones they got right/wrong =Analyze text and display information about it (ex: how many words in a paragraph)
 o	Do they want to go through the wrong ones again = Lists/Dictionaries
 •	Read the Q/A from a file =FileIO
+Linq = Count 
 Stretch Goal ** allow the user add q/a

@@ -12,7 +12,7 @@ namespace Flashcards
                             string seeAnswer = Console.ReadLine();
                             
                             Console.WriteLine(entry.Value + "\n");
-                            Console.WriteLine("Did you get the answer right? y/n");
+                            Console.WriteLine("Did you get the answer right? y/n OR enter 'Q' to quit");
         }
     }
 

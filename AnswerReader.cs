@@ -17,7 +17,7 @@ namespace Flashcards
 
         }
 
-        public static void SortList(string firstIsAnswerRight, KeyValuePair <string, string> entry)
+        public static void SortResponses(string firstIsAnswerRight, KeyValuePair <string, string> entry)
         {
                  if (firstIsAnswerRight == "y")
                 {
@@ -27,6 +27,7 @@ namespace Flashcards
                 {
                     Wrong.wrong.Add(entry.Key, entry.Value);
                 } 
+               
         }
     }
 }
