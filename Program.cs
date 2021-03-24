@@ -23,9 +23,36 @@ namespace Flashcards
             }
             Console.WriteLine("\n" + "Please enter in your username:" );
             var userSelection = Console.ReadLine().ToLower();
-
+            var isUser = 0;
+            foreach(var user in fileContents)
+            {
+                if(userSelection == user.Username.ToLower())
+                {
+                    isUser ++;
+                }
+            }
+            if (isUser < 1)
+            {
+                Console.WriteLine("Please enter a valid user!");
+                System.Environment.Exit(1);
+            }
+                       // Console.WriteLine(userSelection);
             
-                       
+                    // if (fileContents.ToString().ToLower().Contains(userSelection))
+                    // {
+                        
+                    //     Console.WriteLine("User found");
+                    // }
+            // var activeUser = from user in fileContents
+            //                 where user.Username == userSelection
+            //                 select user;
+                           // Console.WriteLine(activeUser);
+                
+
+                
+                  
+            
+                    
                        
             foreach (KeyValuePair<string, string> entry in QA.qa)
                 {
