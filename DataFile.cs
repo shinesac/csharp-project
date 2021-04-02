@@ -26,7 +26,6 @@ namespace Flashcards
                     var user = new User();
                     string[] values = line.Split(',');
                     user.Username = values[0];
-                    user.Score = values[1];
                     userInfo.Add(user);
                 }
             }
