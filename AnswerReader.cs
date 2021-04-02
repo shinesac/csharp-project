@@ -26,8 +26,7 @@ namespace Flashcards
                 else if (firstIsAnswerRight == "n")
                 {
                     Wrong.wrong.Add(entry.Key, entry.Value);
-                } 
-               
+                }  
         }
     }
 }

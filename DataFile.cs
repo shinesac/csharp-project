@@ -32,7 +32,5 @@ namespace Flashcards
             }
             return userInfo;       
         }       
-
-                  
-    } 
+    }
 }

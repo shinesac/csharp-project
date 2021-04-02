@@ -10,8 +10,6 @@ namespace Flashcards
         public string Username {get; set;}
         public string Score {get; set;}
 
-    }
-
-   
+    } 
 }
 

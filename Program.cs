@@ -19,10 +19,12 @@ namespace Flashcards
             Console.WriteLine("Users: ");
             foreach (var user in fileContents)
             {
-            Console.WriteLine(user.Username);
+                Console.WriteLine(user.Username);
             }
+           
             Console.WriteLine("\n" + "Please enter in your username:" );
             var userSelection = Console.ReadLine().ToLower();
+            
             var isUser = 0;
             foreach(var user in fileContents)
             {
@@ -36,24 +38,7 @@ namespace Flashcards
                 Console.WriteLine("Please enter a valid user!");
                 System.Environment.Exit(1);
             }
-                       // Console.WriteLine(userSelection);
-            
-                    // if (fileContents.ToString().ToLower().Contains(userSelection))
-                    // {
-                        
-                    //     Console.WriteLine("User found");
-                    // }
-            // var activeUser = from user in fileContents
-            //                 where user.Username == userSelection
-            //                 select user;
-                           // Console.WriteLine(activeUser);
-                
-
-                
-                  
-            
-                    
-                       
+                            
             foreach (KeyValuePair<string, string> entry in QA.qa)
                 {
                     AskandShow.askandshow(entry);
@@ -68,53 +53,46 @@ namespace Flashcards
                     }   
                 }
                     
-                int CorrectCount = Correct.correct.Count();
-                int WrongCount = Wrong.wrong.Count();
-                int QACount = QA.qa.Count();
-                double scoreCount = (CorrectCount/QACount)*100;
+            int CorrectCount = Correct.correct.Count();
+            int WrongCount = Wrong.wrong.Count();
+           
+            while (WrongCount != 0)
+            {   
+                                            
+                Console.WriteLine("\n" + "Quiz Results: You got {0} correct and {1} wrong!", CorrectCount, WrongCount );
+                Console.WriteLine("\n" + "Would you like to review the incorrect questions? y/n.");
 
-                while (WrongCount != 0)
-                {   
-                                                
-                    Console.WriteLine("\n" + "Quiz Results: You got {0} correct and {1} wrong!", CorrectCount, WrongCount );
-                    Console.WriteLine("\n" + "Would you like to review the incorrect questions? y/n.");
-
-                    var reviewQuestions = Console.ReadLine().ToLower();
-            
-                    if (reviewQuestions == "y")
+                var reviewQuestions = Console.ReadLine().ToLower();
+        
+                if (reviewQuestions == "y")
+                {
+                    Correct.correct.Clear();
+                    
+                    foreach (KeyValuePair<string, string> entry in Wrong.wrong)
                     {
-                        Correct.correct.Clear();
-                        
-                        foreach (KeyValuePair<string, string> entry in Wrong.wrong)
+                        AskandShow.askandshow(entry);
+                        var secondIsAnswerRight = Console.ReadLine().ToLower();
+
+                        if (AnswerReader.Read(secondIsAnswerRight, entry) == false)
                         {
-                            AskandShow.askandshow(entry);
-                            var secondIsAnswerRight = Console.ReadLine().ToLower();
-
-                            if (AnswerReader.Read(secondIsAnswerRight, entry) == false)
-                            {
-                                continue;
-                            }
+                            continue;
                         }
+                    }
 
-                        CorrectCount = Correct.correct.Count();
-                        WrongCount = Wrong.wrong.Count();
-                    }
-                    else if (reviewQuestions == "n")
-                    {
-                        break;
-                    }
+                    CorrectCount = Correct.correct.Count();
+                    WrongCount = Wrong.wrong.Count();
                 }
+                else if (reviewQuestions == "n")
+                {
+                    break;
+                }
+            }
 
                 if (WrongCount == 0 & CorrectCount > 0)
-                {
-                
-                    // File.WriteAllText(fileName, scoreCount.ToString());
-                        
+                {                        
                     Console.WriteLine("\n" + "Congratulations, you got all answered questions correct!");          
                 }
                 
-            }
         }
     }
-
-
+}
